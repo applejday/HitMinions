@@ -18,7 +18,6 @@
 		1AC6FB31180E99EB004C840B /* libcocos2dx-extensions iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AC6FB09180E9839004C840B /* libcocos2dx-extensions iOS.a */; };
 		1AC6FB32180E99EB004C840B /* libCocosDenshion iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AC6FB0F180E9839004C840B /* libCocosDenshion iOS.a */; };
 		1AFAF8B716D35DE700DB1158 /* AppDelegate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1AFAF8B316D35DE700DB1158 /* AppDelegate.cpp */; };
-		1AFAF8B816D35DE700DB1158 /* HelloWorldScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1AFAF8B516D35DE700DB1158 /* HelloWorldScene.cpp */; };
 		1AFAF8BC16D35E4900DB1158 /* CloseNormal.png in Resources */ = {isa = PBXBuildFile; fileRef = 1AFAF8B916D35E4900DB1158 /* CloseNormal.png */; };
 		1AFAF8BD16D35E4900DB1158 /* CloseSelected.png in Resources */ = {isa = PBXBuildFile; fileRef = 1AFAF8BA16D35E4900DB1158 /* CloseSelected.png */; };
 		1AFAF8BE16D35E4900DB1158 /* HelloWorld.png in Resources */ = {isa = PBXBuildFile; fileRef = 1AFAF8BB16D35E4900DB1158 /* HelloWorld.png */; };
@@ -36,7 +35,6 @@
 		5087E75417EB910900C73F5D /* CloseSelected.png in Resources */ = {isa = PBXBuildFile; fileRef = 1AFAF8BA16D35E4900DB1158 /* CloseSelected.png */; };
 		5087E75517EB910900C73F5D /* HelloWorld.png in Resources */ = {isa = PBXBuildFile; fileRef = 1AFAF8BB16D35E4900DB1158 /* HelloWorld.png */; };
 		5087E75717EB910900C73F5D /* AppDelegate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1AFAF8B316D35DE700DB1158 /* AppDelegate.cpp */; };
-		5087E75817EB910900C73F5D /* HelloWorldScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1AFAF8B516D35DE700DB1158 /* HelloWorldScene.cpp */; };
 		5087E76317EB910900C73F5D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
 		5087E76517EB910900C73F5D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765A40DF7441C002DB57D /* CoreGraphics.framework */; };
 		5087E76717EB910900C73F5D /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB412928DE900B8313A /* libz.dylib */; };
@@ -62,10 +60,22 @@
 		50EF629917ECD46A001EB2F8 /* Icon-100.png in Resources */ = {isa = PBXBuildFile; fileRef = 50EF629517ECD46A001EB2F8 /* Icon-100.png */; };
 		50EF62A217ECD613001EB2F8 /* Icon-29.png in Resources */ = {isa = PBXBuildFile; fileRef = 50EF62A017ECD613001EB2F8 /* Icon-29.png */; };
 		50EF62A317ECD613001EB2F8 /* Icon-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 50EF62A117ECD613001EB2F8 /* Icon-50.png */; };
+		5F081BC218E5805B00A3A92D /* Minion.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5F081BC018E5805A00A3A92D /* Minion.cpp */; };
+		5F081BC318E5805B00A3A92D /* Minion.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5F081BC018E5805A00A3A92D /* Minion.cpp */; };
+		5F081BCE18E5B49600A3A92D /* GameMediator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5F081BCC18E5B49600A3A92D /* GameMediator.cpp */; };
+		5F081BCF18E5B49600A3A92D /* GameMediator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5F081BCC18E5B49600A3A92D /* GameMediator.cpp */; };
 		5F0A588D18E435EC00BC8ECC /* GameScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5F0A588B18E435EC00BC8ECC /* GameScene.cpp */; };
 		5F0A588E18E435EC00BC8ECC /* GameScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5F0A588B18E435EC00BC8ECC /* GameScene.cpp */; };
 		5F0A589618E43B8500BC8ECC /* fonts in Resources */ = {isa = PBXBuildFile; fileRef = 5F0A589518E43B8500BC8ECC /* fonts */; };
 		5F0A589718E43B8500BC8ECC /* fonts in Resources */ = {isa = PBXBuildFile; fileRef = 5F0A589518E43B8500BC8ECC /* fonts */; };
+		5F0A7A5118E52D5000360E09 /* Equip.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5F0A7A4918E52D5000360E09 /* Equip.cpp */; };
+		5F0A7A5218E52D5000360E09 /* Equip.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5F0A7A4918E52D5000360E09 /* Equip.cpp */; };
+		5F0A7A5318E52D5000360E09 /* MainMinion.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5F0A7A4B18E52D5000360E09 /* MainMinion.cpp */; };
+		5F0A7A5418E52D5000360E09 /* MainMinion.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5F0A7A4B18E52D5000360E09 /* MainMinion.cpp */; };
+		5F0A7A5518E52D5000360E09 /* PinkMinion.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5F0A7A4D18E52D5000360E09 /* PinkMinion.cpp */; };
+		5F0A7A5618E52D5000360E09 /* PinkMinion.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5F0A7A4D18E52D5000360E09 /* PinkMinion.cpp */; };
+		5F0A7A5718E52D5000360E09 /* YellowMinion.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5F0A7A4F18E52D5000360E09 /* YellowMinion.cpp */; };
+		5F0A7A5818E52D5000360E09 /* YellowMinion.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5F0A7A4F18E52D5000360E09 /* YellowMinion.cpp */; };
 		5F73966618E51AA8003DF3B0 /* icon in Resources */ = {isa = PBXBuildFile; fileRef = 5F73966218E51AA8003DF3B0 /* icon */; };
 		5F73966718E51AA8003DF3B0 /* icon in Resources */ = {isa = PBXBuildFile; fileRef = 5F73966218E51AA8003DF3B0 /* icon */; };
 		5F73966818E51AA8003DF3B0 /* option in Resources */ = {isa = PBXBuildFile; fileRef = 5F73966318E51AA8003DF3B0 /* option */; };
@@ -265,8 +275,6 @@
 		1ACB3243164770DE00914215 /* libcurl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcurl.a; path = ../../cocos2dx/platform/third_party/ios/libraries/libcurl.a; sourceTree = "<group>"; };
 		1AFAF8B316D35DE700DB1158 /* AppDelegate.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = AppDelegate.cpp; path = ../Classes/AppDelegate.cpp; sourceTree = "<group>"; };
 		1AFAF8B416D35DE700DB1158 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = ../Classes/AppDelegate.h; sourceTree = "<group>"; };
-		1AFAF8B516D35DE700DB1158 /* HelloWorldScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = HelloWorldScene.cpp; path = ../Classes/HelloWorldScene.cpp; sourceTree = "<group>"; };
-		1AFAF8B616D35DE700DB1158 /* HelloWorldScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HelloWorldScene.h; path = ../Classes/HelloWorldScene.h; sourceTree = "<group>"; };
 		1AFAF8B916D35E4900DB1158 /* CloseNormal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CloseNormal.png; sourceTree = "<group>"; };
 		1AFAF8BA16D35E4900DB1158 /* CloseSelected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CloseSelected.png; sourceTree = "<group>"; };
 		1AFAF8BB16D35E4900DB1158 /* HelloWorld.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HelloWorld.png; sourceTree = "<group>"; };
@@ -306,9 +314,21 @@
 		50EF629517ECD46A001EB2F8 /* Icon-100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-100.png"; sourceTree = "<group>"; };
 		50EF62A017ECD613001EB2F8 /* Icon-29.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-29.png"; sourceTree = "<group>"; };
 		50EF62A117ECD613001EB2F8 /* Icon-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-50.png"; sourceTree = "<group>"; };
+		5F081BC018E5805A00A3A92D /* Minion.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Minion.cpp; path = ../Classes/Minion.cpp; sourceTree = "<group>"; };
+		5F081BC118E5805A00A3A92D /* Minion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Minion.h; path = ../Classes/Minion.h; sourceTree = "<group>"; };
+		5F081BCC18E5B49600A3A92D /* GameMediator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameMediator.cpp; sourceTree = "<group>"; };
+		5F081BCD18E5B49600A3A92D /* GameMediator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameMediator.h; sourceTree = "<group>"; };
 		5F0A588B18E435EC00BC8ECC /* GameScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GameScene.cpp; path = ../Classes/GameScene.cpp; sourceTree = "<group>"; };
 		5F0A588C18E435EC00BC8ECC /* GameScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameScene.h; path = ../Classes/GameScene.h; sourceTree = "<group>"; };
 		5F0A589518E43B8500BC8ECC /* fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = fonts; sourceTree = "<group>"; };
+		5F0A7A4918E52D5000360E09 /* Equip.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Equip.cpp; path = ../Classes/Equip.cpp; sourceTree = "<group>"; };
+		5F0A7A4A18E52D5000360E09 /* Equip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Equip.h; path = ../Classes/Equip.h; sourceTree = "<group>"; };
+		5F0A7A4B18E52D5000360E09 /* MainMinion.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MainMinion.cpp; path = ../Classes/MainMinion.cpp; sourceTree = "<group>"; };
+		5F0A7A4C18E52D5000360E09 /* MainMinion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainMinion.h; path = ../Classes/MainMinion.h; sourceTree = "<group>"; };
+		5F0A7A4D18E52D5000360E09 /* PinkMinion.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PinkMinion.cpp; path = ../Classes/PinkMinion.cpp; sourceTree = "<group>"; };
+		5F0A7A4E18E52D5000360E09 /* PinkMinion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PinkMinion.h; path = ../Classes/PinkMinion.h; sourceTree = "<group>"; };
+		5F0A7A4F18E52D5000360E09 /* YellowMinion.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = YellowMinion.cpp; path = ../Classes/YellowMinion.cpp; sourceTree = "<group>"; };
+		5F0A7A5018E52D5000360E09 /* YellowMinion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YellowMinion.h; path = ../Classes/YellowMinion.h; sourceTree = "<group>"; };
 		5F73966218E51AA8003DF3B0 /* icon */ = {isa = PBXFileReference; lastKnownFileType = folder; path = icon; sourceTree = "<group>"; };
 		5F73966318E51AA8003DF3B0 /* option */ = {isa = PBXFileReference; lastKnownFileType = folder; path = option; sourceTree = "<group>"; };
 		5F73966418E51AA8003DF3B0 /* play */ = {isa = PBXFileReference; lastKnownFileType = folder; path = play; sourceTree = "<group>"; };
@@ -395,10 +415,10 @@
 		15AA9C4015B7EC450033D6C2 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				5F081BCB18E5B44E00A3A92D /* GameManager */,
+				5F0A7A4218E52D2B00360E09 /* Objects */,
 				1AFAF8B316D35DE700DB1158 /* AppDelegate.cpp */,
 				1AFAF8B416D35DE700DB1158 /* AppDelegate.h */,
-				1AFAF8B516D35DE700DB1158 /* HelloWorldScene.cpp */,
-				1AFAF8B616D35DE700DB1158 /* HelloWorldScene.h */,
 				5F73967418E51ACB003DF3B0 /* SplashScene.cpp */,
 				5F73967518E51ACB003DF3B0 /* SplashScene.h */,
 				5F73967818E51ACB003DF3B0 /* MainMenuScene.cpp */,
@@ -522,6 +542,32 @@
 			name = Icons;
 			path = ios;
 			sourceTree = SOURCE_ROOT;
+		};
+		5F081BCB18E5B44E00A3A92D /* GameManager */ = {
+			isa = PBXGroup;
+			children = (
+				5F081BCC18E5B49600A3A92D /* GameMediator.cpp */,
+				5F081BCD18E5B49600A3A92D /* GameMediator.h */,
+			);
+			name = GameManager;
+			sourceTree = "<group>";
+		};
+		5F0A7A4218E52D2B00360E09 /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				5F0A7A4918E52D5000360E09 /* Equip.cpp */,
+				5F0A7A4A18E52D5000360E09 /* Equip.h */,
+				5F0A7A4B18E52D5000360E09 /* MainMinion.cpp */,
+				5F0A7A4C18E52D5000360E09 /* MainMinion.h */,
+				5F0A7A4D18E52D5000360E09 /* PinkMinion.cpp */,
+				5F0A7A4E18E52D5000360E09 /* PinkMinion.h */,
+				5F0A7A4F18E52D5000360E09 /* YellowMinion.cpp */,
+				5F0A7A5018E52D5000360E09 /* YellowMinion.h */,
+				5F081BC018E5805A00A3A92D /* Minion.cpp */,
+				5F081BC118E5805A00A3A92D /* Minion.h */,
+			);
+			name = Objects;
+			sourceTree = "<group>";
 		};
 		78C7DDAA14EBA5050085D0C2 /* Resources */ = {
 			isa = PBXGroup;
@@ -785,11 +831,16 @@
 				503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */,
 				1AFAF8B716D35DE700DB1158 /* AppDelegate.cpp in Sources */,
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
-				1AFAF8B816D35DE700DB1158 /* HelloWorldScene.cpp in Sources */,
 				5F73967618E51ACB003DF3B0 /* SplashScene.cpp in Sources */,
 				5F73967A18E51ACB003DF3B0 /* MainMenuScene.cpp in Sources */,
 				5F73968218E51ACB003DF3B0 /* OptionScene.cpp in Sources */,
 				5F0A588D18E435EC00BC8ECC /* GameScene.cpp in Sources */,
+				5F0A7A5118E52D5000360E09 /* Equip.cpp in Sources */,
+				5F0A7A5318E52D5000360E09 /* MainMinion.cpp in Sources */,
+				5F0A7A5518E52D5000360E09 /* PinkMinion.cpp in Sources */,
+				5F0A7A5718E52D5000360E09 /* YellowMinion.cpp in Sources */,
+				5F081BC218E5805B00A3A92D /* Minion.cpp in Sources */,
+				5F081BCE18E5B49600A3A92D /* GameMediator.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -798,12 +849,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				5087E75717EB910900C73F5D /* AppDelegate.cpp in Sources */,
-				5087E75817EB910900C73F5D /* HelloWorldScene.cpp in Sources */,
 				503AE10517EB98FF00D1A890 /* main.cpp in Sources */,
 				5F73967718E51ACB003DF3B0 /* SplashScene.cpp in Sources */,
 				5F73967B18E51ACB003DF3B0 /* MainMenuScene.cpp in Sources */,
 				5F73968318E51ACB003DF3B0 /* OptionScene.cpp in Sources */,
 				5F0A588E18E435EC00BC8ECC /* GameScene.cpp in Sources */,
+				5F0A7A5218E52D5000360E09 /* Equip.cpp in Sources */,
+				5F0A7A5418E52D5000360E09 /* MainMinion.cpp in Sources */,
+				5F0A7A5618E52D5000360E09 /* PinkMinion.cpp in Sources */,
+				5F0A7A5818E52D5000360E09 /* YellowMinion.cpp in Sources */,
+				5F081BC318E5805B00A3A92D /* Minion.cpp in Sources */,
+				5F081BCF18E5B49600A3A92D /* GameMediator.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
