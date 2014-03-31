@@ -9,6 +9,8 @@
 #include "MainMenuScene.h"
 #include "OptionScene.h"
 #include "GameScene.h"
+#include "GameMediator.h"
+#include "SimpleAudioEngine.h"
 
 
 enum BUTTON_TAG{
@@ -33,6 +35,10 @@ bool MainMenuScene::init()
 {
     if (!Layer::init()) {
         return false;
+    }
+    /** play background music **/
+    if (!CocosDenshion::SimpleAudioEngine::getInstance()->isBackgroundMusicPlaying() && !GameMediator::shareInstance()->getTurnOffSound()) {
+        CocosDenshion::SimpleAudioEngine::getInstance()->playBackgroundMusic("sound/start.mp3", true);
     }
     
     Size size = Director::getInstance()->getVisibleSize();
@@ -70,11 +76,11 @@ bool MainMenuScene::init()
     auto spriteFrame3 = SpriteFrame::create("start/minion4.png", Rect(0, 0, 308, 431));
     animFrames.pushBack(spriteFrame3);
     
-    auto animation = Animation::createWithSpriteFrames(animFrames, 1.0f);
-    auto sprite = Sprite::createWithSpriteFrame(spriteFrame);
-    sprite->setPosition(Point(200, 200));
-    sprite->runAction(RepeatForever::create(Animate::create(animation)));
-    this->addChild(sprite);
+    auto animation = Animation::createWithSpriteFrames(animFrames, 0.6f);
+    minionSpr = Sprite::createWithSpriteFrame(spriteFrame);
+    minionSpr->setPosition(Point(200, 200));
+    minionSpr->runAction(RepeatForever::create(Animate::create(animation)));
+    this->addChild(minionSpr);
     
     /* help dialog */
     helpDialog = MenuItemImage::create("start/help.png","start/help.png", CC_CALLBACK_1(MainMenuScene::onButtonClick, this));
@@ -92,6 +98,13 @@ bool MainMenuScene::init()
     m2->setPosition(Point(size.width/2, size.height/2));
     this->addChild(m2);
 
+    /**
+     event listener
+     */
+    auto dispatcher = Director::getInstance()->getEventDispatcher();
+    auto listener = EventListenerTouchAllAtOnce::create();
+    listener->onTouchesBegan = CC_CALLBACK_2(MainMenuScene::onTouchesBegan, this);
+    dispatcher->addEventListenerWithSceneGraphPriority(listener, this);
     
     return true;
 }
@@ -109,12 +122,14 @@ void MainMenuScene::onButtonClick(Object* sender)
                 break;
             case PLAY_BTN:{
                 auto gameScene = GameScene::createScene();
-                Director::getInstance()->pushScene(TransitionCrossFade::create(0.3, gameScene));
+                Director::getInstance()->pushScene(TransitionFade::create(0.3, gameScene));
+                CocosDenshion::SimpleAudioEngine::getInstance()->playEffect("sound/play.mp3");
                 break;
             }
             case SETTING_BTN:{
                 auto optScene = OptionScene::createScene();
-                Director::getInstance()->pushScene(TransitionCrossFade::create(0.3, optScene));
+                Director::getInstance()->pushScene(TransitionFade::create(0.3, optScene));
+                CocosDenshion::SimpleAudioEngine::getInstance()->playEffect("sound/option.mp3");
                 break;
             }
             case HELP_DIALOG:
@@ -127,4 +142,22 @@ void MainMenuScene::onButtonClick(Object* sender)
                 break;
         }
     }
+}
+
+void MainMenuScene::onTouchesBegan(const std::vector<cocos2d::Touch *> &touches, cocos2d::Event *unused_event)
+{
+    Touch* touch = touches[0];
+	Point location = touch->getLocation();
+    Rect sprRect = minionSpr->getBoundingBox();
+    if (sprRect.containsPoint(location)) {
+        Director::getInstance()->getActionManager()->pauseTarget(minionSpr);
+        minionSpr->setTexture("start/minion3.png");
+        CocosDenshion::SimpleAudioEngine::getInstance()->playEffect("sound/hello.mp3");
+        schedule(schedule_selector(MainMenuScene::resumeActionMinion), 2.0f);
+    }
+}
+
+void MainMenuScene::resumeActionMinion(float dt)
+{
+    Director::getInstance()->getActionManager()->resumeTarget(minionSpr);
 }

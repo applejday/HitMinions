@@ -2,21 +2,20 @@
 #include "HelloWorldScene.h"
 MainMinion::MainMinion(int posX,int posY)
 {
-	sprite = Sprite::create("play/left.png");
+	sprite = Sprite::create("play/left_up.png");
 	sprite->setPosition(Point(posX, posY));
 	
 }
 
 void MainMinion::Left()
 {
-	sprite->setTexture("play/left.png");
-    srand(time(NULL));
+	sprite->setTexture("play/left_up.png");
 }
 
 void MainMinion::Right()
 {
 	//sprite->setTexture(TextureCache::sharedTextureCache()->addImage("right.png"));	
-	sprite->setTexture("play/right.png");
+	sprite->setTexture("play/right_up.png");
 }
 void MainMinion::LeftDown(int posY)
 {

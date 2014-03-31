@@ -22,8 +22,13 @@ private:
     LabelTTF* numOfMinionsIsHited;
     MenuItemImage* resultView;
     Array* liveSprites;
+    Vector<Node*> actionManager;
+    Vector<Object*> schedulerManager;
+    
     int lives;
     int scores;
+
+    CC_SYNTHESIZE(int, numMinionHited, NumMinionHited);
     
     /**
      variable for game logic
@@ -34,6 +39,7 @@ private:
 	float vt;
     int currentTurn;
     int a,p1,p2,p3;
+    bool isFinish;
     
 public:
     static Scene* createScene();
@@ -42,6 +48,7 @@ public:
     void onButtonClick(Object* sender);
     void updateScore(int value);
     void updateLives(int value);
+    void showResultView(Node* sender);
     
     /**
      Game logic
@@ -52,6 +59,7 @@ public:
 	void updateScore(float dt);
     void turnManage(float dt);
     int getTimeByTurn(int turn);
+    void resumeTurnManage();
     
     static int hit;
 	static int hitPos;

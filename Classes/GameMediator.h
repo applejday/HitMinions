@@ -23,6 +23,7 @@ public:
     bool init();
     
     CC_SYNTHESIZE_RETAIN(GameScene*, _gameLayer, GameLayer);
+    CC_SYNTHESIZE(bool, turnOffSound, TurnOffSound);
 
 };
 

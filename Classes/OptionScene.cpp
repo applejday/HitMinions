@@ -7,6 +7,8 @@
 //
 
 #include "OptionScene.h"
+#include "GameMediator.h"
+#include "SimpleAudioEngine.h"
 
 Scene* OptionScene::createScene()
 {
@@ -47,7 +49,16 @@ void OptionScene::onButtonClick(Object* sender){
     if (item) {
         switch (item->getTag()) {
             case 1:
-                soundItem->setNormalImage(Sprite::create("option/vol2.png"));
+                if (!GameMediator::shareInstance()->getTurnOffSound()) {
+                    GameMediator::shareInstance()->setTurnOffSound(true);
+                    soundItem->setNormalImage(Sprite::create("option/vol2.png"));
+                    CocosDenshion::SimpleAudioEngine::getInstance()->pauseBackgroundMusic();
+                }else{
+                    GameMediator::shareInstance()->setTurnOffSound(false);
+                    soundItem->setNormalImage(Sprite::create("option/vol1.png"));
+                    CocosDenshion::SimpleAudioEngine::getInstance()->playBackgroundMusic("sound/background.mp3");
+                }
+                    
                 break;
             case 2:
                 Director::getInstance()->popScene();

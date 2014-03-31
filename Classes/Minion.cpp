@@ -31,13 +31,13 @@ bool Minion::initWith(const char *fileName, int ray, int velocity, int hp, int t
             vt -= 10;
     }
 	if(p==1||p==5)
-		y=121;
+		y= 94;
 	else if(p==2||p==6)
-		y=272;
+		y=248;
 	else if(p==3||p==7)
-		y=423;
+		y=393;
 	else if(p==4||p==8)
-		y=574;
+		y=544;
 	sprite->setPosition(Point(x, y));
 	this->addChild(sprite);
     return true;
@@ -45,7 +45,6 @@ bool Minion::initWith(const char *fileName, int ray, int velocity, int hp, int t
 
 void Minion::removeMinion()
 {
-    this->unscheduleUpdate();
-    this->stopAllActions();
+    this->removeAllChildren();
     this->removeFromParentAndCleanup(true);
 }

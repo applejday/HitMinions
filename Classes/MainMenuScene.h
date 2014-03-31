@@ -17,12 +17,15 @@ class MainMenuScene : public Layer {
 private:
     MenuItemImage* helpDialog;
     MenuItemImage* infoDialog;
+    Sprite* minionSpr;
     
 public:
     static Scene* createScene();
     virtual bool init();
     void onButtonClick(Object* sender);
-
+    void onTouchesBegan(const std::vector<cocos2d::Touch*>& touches, cocos2d::Event *unused_event);
+    void resumeActionMinion(float dt);
+    
     CREATE_FUNC(MainMenuScene);
 };
 

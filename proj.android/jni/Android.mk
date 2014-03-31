@@ -8,7 +8,16 @@ LOCAL_MODULE_FILENAME := libcocos2dcpp
 
 LOCAL_SRC_FILES := hellocpp/main.cpp \
                    ../../Classes/AppDelegate.cpp \
-                   ../../Classes/HelloWorldScene.cpp
+                   ../../Classes/GameMediator.cpp \
+                   ../../Classes/Equip.cpp \
+                   ../../Classes/MainMinion.cpp \
+                   ../../Classes/PinkMinion.cpp \
+                   ../../Classes/YellowMinion.cpp \
+                   ../../Classes/Minion.cpp \
+                   ../../Classes/SplashScene.cpp \
+                   ../../Classes/MainMenuScene.cpp \
+                   ../../Classes/OptionScene.cpp \
+                   ../../Classes/GameScene.cpp \
 
 LOCAL_C_INCLUDES := $(LOCAL_PATH)/../../Classes
 

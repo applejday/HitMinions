@@ -28,6 +28,7 @@ public:
 	int p;
 	bool live;
 	int hp;
+    int typeAnimation;
     /**
      kieu cua Minion
      @value:
